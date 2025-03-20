@@ -1,0 +1,180 @@
+* { 
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+body { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a { 
+    text-decoration: none;
+}
+li { 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Main content start */
+.main-container { 
+    display: flex;
+    flex-direction: column;
+    padding: 4% 6%;
+}
+
+.main-header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 1em;
+}
+.main-header__text h3, 
+.main-header__text p {
+    padding: 0;
+    margin: 0;
+ }
+
+.main-header__text h3 { 
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+.main-header__text p { 
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 0.5;
+} 
+.main-header__pic { 
+    position: relative;
+}
+.main-header__pic img{ 
+    width: 45px;
+    height: 45px;
+    z-index: -999;
+    cursor: pointer;
+}
+
+.main-header__pic ul{
+    right: 30%;
+    top: 1%;
+    z-index: 9999;
+    position: absolute;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 15px 17px;
+    width: 90px;
+    height: 60px;
+    gap: 1em;
+    border-radius: 10px;
+}
+.main-header__pic ul {
+    display: none; /* Sembunyikan default */
+    background: white; /* Pastikan menu terlihat */
+}
+
+/* Tampilkan menu saat aktif */
+.main-header__pic ul.active {
+    display: flex;
+}
+
+/* Styling default untuk semua link dalam menu */
+.main-header__pic ul li a {
+    text-decoration: none;
+    color: #242424; /* Warna default lebih konsisten */
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+/* Warna merah khusus tombol Logout */
+.main-header__pic ul li:last-child a { 
+    color: red;
+}
+
+/* Efek hover pada semua link */
+.main-header__pic ul li a:hover { 
+    opacity: 1;
+}
+@media screen and (max-width: 460px) {
+    .main-container { 
+        padding: 4% 3%;
+    }
+    .main-header { 
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 1em;
+    }
+}
+
+
+/* Action button start */
+.action-button { 
+    width: 100%;
+    padding: 10px;
+}
+.action-container { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.action-container .search { 
+    background-color: #F0F9FF;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+.action-container .search input { 
+    border: none;
+    background: transparent;
+    width: 280px;
+    outline: none;
+}
+.action-container .search i { 
+    opacity: 0.5;
+}
+
+.action-button__btn { 
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.action-button__btn button { 
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.action-button__btn .delete  {
+    color: #fff;
+    background-color: #ff5252;
+}
+.action-button__btn .delete:hover { 
+    background-color: #ff2a2a;
+}
+.action-button__btn .add  {
+    color: #fff;
+    background-color: #5286ff;
+}
+.action-button__btn .add:hover { 
+    background-color: #2666fc;
+}
+@media screen and (max-width: 630px) {
+    .action-container { 
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .action-container .search {
+        width: 90%;
+     }
+
+}
+/* Action button end */
+/* Main content end */
+
+
