@@ -200,7 +200,7 @@ thead th {
     font-size: 13px;
 }
 tbody tr td{ 
-    padding: 12px 10px;
+    padding: 20px 10px;
     text-align: right;
 }
 
@@ -211,6 +211,13 @@ tbody tr td{
 }
 tbody tr .time { 
     opacity: 0.5;
+}
+tbody tr {
+    border-bottom: 1px solid #ddd; /* Warna border abu-abu */
+}
+
+tbody tr:last-child {
+    border-bottom: none; /* Hapus border di baris terakhir */
 }
 
 /* Updated At, Created At, Actions rata kanan */
@@ -254,4 +261,45 @@ tbody tr i {
 tbody tr i:hover { 
      background-color: #eeeeee;
 }
+@media screen and (max-width: 825px) {
+    .table-container {
+        overflow-x: auto;
+        white-space: nowrap;
+        -ms-overflow-style: none;  /* Untuk IE & Edge */
+        scrollbar-width: none;     /* Untuk Firefox */
+    }
+
+    .table-container::-webkit-scrollbar {
+        display: none;  /* Untuk Chrome, Safari, dan Opera */
+    }
+
+    table {
+        min-width: 900px; /* Membuat tabel lebih lebar supaya ada space */
+    }
+
+    thead th, tbody td {
+        padding: 15px 10px; /* Tambah padding biar lebih lega */
+    }
+
+    /* Ubah lebar tiap kolom */
+    .name-column {
+        width: 40%; /* Lebih lebar karena nama bisa panjang */
+    }
+
+    .info-header {
+        width: 25%; /* Lebih lebar dari sebelumnya */
+    }
+
+    tbody tr td {
+        font-size: 14px; /* Sedikit lebih besar agar lebih nyaman dilihat */
+    }
+}
+@media screen and (max-width: 416px) {
+        /* Ubah lebar tiap kolom */
+        .name-column {
+            width: 20%; /* Lebih lebar karena nama bisa panjang */
+        }
+    
+}
+
 /* Table End */
